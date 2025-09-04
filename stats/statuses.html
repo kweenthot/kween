@@ -164,7 +164,7 @@
 </script>
                     <div class="charts--thread-status charts--breakdown">
     <h2>too much</h2>
-    <canvas id="toomuch"></canvas>
+    <canvas id="tm"></canvas>
 </div>
 <script>
     fetch(`https://opensheet.elk.sh/${sheetID}/Threads`)
@@ -179,7 +179,7 @@
             let threadStats = createThreadStats(threadData, siteObject);
 
             /*Thread Status*/
-            new Chart(document.getElementById('toomuch'), {
+            new Chart(document.getElementById('tm'), {
                 type: 'pie',
                 data: {
                     labels: threadStats[0].status.tags.map(item => item.toUpperCase()),
